@@ -32,6 +32,5 @@ Frankly speaking, I think it's a nice idea.
 不同的方面不少，目前来讲有以下几个方面：
 
 - 技术选择的不同，Python+Sanic -> Elixir+Phoenix
-- 数据库选择的不同，SQLite -> PostgreSQL（存疑，如果都可以那当然是最好的）
 - 暂时不考虑插件以及二次开发，如需可从源码重新构建
 - （——待续——）
