@@ -7,6 +7,7 @@ import Config
 # any compile-time configuration in here, as it won't be applied.
 # The block below contains prod specific runtime configuration.
 if config_env() == :prod do
+  # like `ext:////priv/xylem_prod.db`
   database_url =
     System.get_env("DATABASE_URL") ||
       raise """

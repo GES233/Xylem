@@ -1,11 +1,29 @@
 import Config
 
 # Configure your database
-config :xylem, Xylem.Repo,
-  database: "/xylem_dev.db",
+use_memory = false
+
+xylem_repo_common_parts = [
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
+]
+
+if use_memory == true do
+  config :xylem, Xylem.Repo,
+    xylem_repo_common_parts ++ [database: ":memory:"]
+
+  # 设置一个关于内存数据库的键，
+  # 使每次启动的时候都会自行创建表并且填充数据
+  config :xylem, :sqlite,
+    use_memory: true
+else
+  config :xylem, Xylem.Repo,
+    xylem_repo_common_parts ++ [database: "/xylem_dev.db"]
+
+  config :xylem, :sqlite,
+    use_memory: false
+end
 
 # For development, we disable any cache and enable
 # debugging and code reloading.
