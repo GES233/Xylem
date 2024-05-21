@@ -13,6 +13,6 @@ defmodule Mix.Tasks.Xylem.Repo.Migrate do
     {:ok, repo} = Application.fetch_env(:xylem, :ecto_repos)
 
     # Xylem only need one repo.
-    repo[0]
+    Enum.at(repo, 0)
   end
 end

@@ -27,6 +27,8 @@
 mix deps.get            # 获取依赖
 mix deps.compile        # 编译依赖
 mix compile             # 编译应用
+# TODO
+# 尽量用其他库的命令替代
 mix xylem.repo.gen      # 创建数据库
 mix xylem.repo.migrate  # 迁移数据库
 mix xylem.admin.gen --nickname {昵称} --password {你设置的密码}
