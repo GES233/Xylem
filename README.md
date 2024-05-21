@@ -2,6 +2,12 @@
 
 *Under the tree of idea from fragments of inspiration to works.*
 
+```text
+═╗ ╦┬ ┬┬  ┌─┐┌┬┐
+╔╩╦╝└┬┘│  ├┤ │││
+╩ ╚═ ┴ ┴─┘└─┘┴ ┴
+```
+
 This is Elixir-implementation of the idea I presented in previous term.
 The source file of that pre at [here](/docs/raw_pre/Slides.pdf)(written in Chinese).
 
