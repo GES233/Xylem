@@ -10,19 +10,18 @@ xylem_repo_common_parts = [
 ]
 
 if use_memory == true do
-  config :xylem, Xylem.Repo,
-    xylem_repo_common_parts ++ [database: ":memory:"]
+  config :xylem, Xylem.Repo, xylem_repo_common_parts ++ [database: ":memory:"]
 
   # 设置一个关于内存数据库的键，
   # 使每次启动的时候都会自行创建表并且填充数据
-  config :xylem, :sqlite,
-    use_memory: true
+  config :xylem, :sqlite, use_memory: true
 else
-  config :xylem, Xylem.Repo,
-    xylem_repo_common_parts ++ [database: "/xylem_dev.db"]
+  config :xylem,
+         Xylem.Repo,
+         xylem_repo_common_parts ++
+           [database: [__DIR__, "../priv/xylem_dev.db"] |> Path.join() |> IO.inspect()]
 
-  config :xylem, :sqlite,
-    use_memory: false
+  config :xylem, :sqlite, use_memory: false
 end
 
 # For development, we disable any cache and enable
