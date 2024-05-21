@@ -1,0 +1,2 @@
+defmodule Content do
+end
