@@ -1,11 +1,27 @@
 # XylemApp
 
-Domain model of `Xylem`.
+`Xylem` 应用的领域模型。
 
-## User and Account
+## 用户与账号
 
-## Content
+### 对于账号的定位
 
-## Tree-structrue in Domain Level
+### 用户是什么？
 
-May required some complex query.
+## 内容
+
+承载用户生产的载体。
+
+### 故事
+
+### 续写
+
+### 记录
+
+## 领域模型的树形结构之体现
+
+（可能需要很多相对复杂的查询）
+
+### 读取
+
+### 写入
